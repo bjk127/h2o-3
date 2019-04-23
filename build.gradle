@@ -209,6 +209,10 @@ subprojects {
         if (project.hasProperty("enableMavenLocal")) { // useful for development
             mavenLocal()
         }
+        maven {
+            url "http://nexus:8081/nexus/repository/public"
+        }
+
         mavenCentral()
         jcenter()
         maven {
